@@ -168,6 +168,49 @@
   .score-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
   .score-center .score-num{font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent)}
   .score-center .score-label{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase}
+
+  /* ── CELULAR E TELAS PEQUENAS ───────────────────── */
+  @media (max-width: 860px){
+    .app{flex-direction:column}
+    .sidebar{width:100%;flex-direction:row;align-items:center;padding:12px 16px;border-right:none;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+    .logo{padding:0;flex:1}
+    .logo-text{font-size:16px}
+    .sidebar-footer{padding:0;border-top:none;display:flex;align-items:center;gap:10px}
+    .user-info{display:none}
+    .avatar{width:32px;height:32px;font-size:12px}
+    .logout-btn{margin-top:0;width:auto;padding:8px 12px}
+    nav{position:fixed;left:0;right:0;bottom:0;flex-direction:row;gap:0;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--border);z-index:60}
+    .nav-section{display:none}
+    .nav-item{flex:1;flex-direction:column;justify-content:center;gap:4px;padding:8px 2px;font-size:10px;line-height:1.15;text-align:center}
+    .nav-item svg{width:20px;height:20px}
+    .main{padding-bottom:84px;overflow:visible}
+    .page{padding:20px 16px}
+    .topbar{margin-bottom:20px;gap:12px}
+    .topbar h1{font-size:21px}
+    .topbar-actions{width:100%}
+    .period-pills{flex:1}
+    .pill{flex:1;padding:8px 6px}
+    .topbar-actions .btn-primary{width:100%;justify-content:center}
+    .cards-grid{grid-template-columns:1fr 1fr !important;gap:10px;margin-bottom:20px}
+    .card{padding:14px}
+    .card-value{font-size:20px}
+    .charts-row{grid-template-columns:1fr !important;gap:12px;margin-bottom:20px}
+    .chart-card{padding:16px}
+    .table-card{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .table-card table{min-width:600px}
+    .table-header{padding:16px}
+    .search-bar{flex:1}
+    .search-bar input{width:100%}
+    th,td{padding:12px 14px}
+    .alert-item{padding:12px 14px;gap:10px}
+    .score-section{flex-direction:column;align-items:flex-start;gap:16px}
+    .form-row{grid-template-columns:1fr}
+    .modal{padding:22px;max-height:90vh;overflow-y:auto}
+    .tabs .tab{font-size:12px}
+  }
+  @media (max-width: 360px){
+    .cards-grid{grid-template-columns:1fr !important}
+  }
   .score-details{flex:1}
   .score-details h3{font-size:16px;font-weight:600;margin-bottom:6px}
   .score-details p{font-size:13px;color:var(--muted2);line-height:1.6}
